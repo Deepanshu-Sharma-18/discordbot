@@ -44,7 +44,8 @@ func Botops(s *discordgo.Session, m *discordgo.MessageCreate) {
 
 func Main() {
 	godotenv.Load(".env")
-	sess, err := discordgo.New("Bot " + "MTA3OTA1MTYyMjMyMTIzMzk3MA.GR9QUX.jx4mTWF9GS3dEdAS_0zacca6Bu4yrTBvhNnHZU")
+	//you'll have to add your own bot token here
+	sess, err := discordgo.New("Bot " + os.Getenv("TOKEN"))
 	if err != nil {
 		panic(err)
 	}
